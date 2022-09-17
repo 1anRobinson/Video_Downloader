@@ -24,5 +24,5 @@ if response == 'y' or response == 'Y':
     video = video.streams.get_highest_resolution() #set stream resolution
     video.download(path)
 elif response == 'n' or response == 'N':
-    print('Roger. Thank you for using the video downloader!')
+    print('Got it. Thank you for using the video downloader!')
     exit()
