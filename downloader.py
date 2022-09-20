@@ -13,15 +13,12 @@ while "www.youtube.com/watch?v=" not in url: # keep looping if url is invalid
     url = input('Invalid URL. Try Again or press \"E\" to exit: ')
     if url == 'E':
         exit()
-    
+
+
 video = YouTube(url) # store the url of the type YouTube into variable
 
 print('\n*****************Video***********************')
 print(video.title) #get and print Youtube Title
-response = input('Continue with download? [Y/N]: ')
-if response == 'y' or response == 'Y':
-    video = video.streams.get_highest_resolution() #set stream resolution
-    video.download(path)
-elif response == 'n' or response == 'N':
-    print('Got it. Thank you for using the video downloader!')
-    exit()
+
+video.streams.get_highest_resolution().download(path)
+print("Done!")
