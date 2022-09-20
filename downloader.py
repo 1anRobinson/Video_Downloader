@@ -18,7 +18,6 @@ video = YouTube(url) # store the url of the type YouTube into variable
 
 print('\n*****************Video***********************')
 print(video.title) #get and print Youtube Title
-print('Size: ', video.streams.get_highest_resolution().filesize,'MB')
 response = input('Continue with download? [Y/N]: ')
 if response == 'y' or response == 'Y':
     video = video.streams.get_highest_resolution() #set stream resolution
